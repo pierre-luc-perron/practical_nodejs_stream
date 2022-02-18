@@ -44,6 +44,22 @@
       "@babel/preset-typescript"
     ]
   },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "airbnb-typescript/base",
+      "prettier"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
   "jest": {
     "modulePathIgnorePatterns": ["dist"],
     "preset": "ts-jest",
