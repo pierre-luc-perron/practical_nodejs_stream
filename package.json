@@ -38,6 +38,11 @@
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
+  "jest": {
+    "modulePathIgnorePatterns": ["dist"],
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
   "lint-staged": {
     "*.ts": ["npx eslint --cache --fix"]
   }
