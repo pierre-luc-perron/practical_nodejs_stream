@@ -38,6 +38,12 @@
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", { "targets": { "node": "current" } }],
+      "@babel/preset-typescript"
+    ]
+  },
   "jest": {
     "modulePathIgnorePatterns": ["dist"],
     "preset": "ts-jest",
