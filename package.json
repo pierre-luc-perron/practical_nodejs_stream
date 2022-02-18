@@ -40,7 +40,14 @@
   },
   "babel": {
     "presets": [
-      ["@babel/preset-env", { "targets": { "node": "current" } }],
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
       "@babel/preset-typescript"
     ]
   },
@@ -61,11 +68,18 @@
     }
   },
   "jest": {
-    "modulePathIgnorePatterns": ["dist"],
+    "modulePathIgnorePatterns": [
+      "dist"
+    ],
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.ts": ["npx eslint --cache --fix"]
+    "*.ts": [
+      "npx eslint --cache --fix"
+    ],
+    "**/*.{ts,json}": [
+      "npx prettier --write"
+    ]
   }
 }
